@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="10dp"
+    app:cardCornerRadius="20dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_hitory_product_text_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:text="Mã Đặt Hàng :"
+            android:textColor="@color/black"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_hitory_product_orderNo"
+            android:layout_width="260dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/tv_hitory_product_text_order"
+            android:text="12341aaa"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_hitory_product_text_order"
+            android:background="@color/colorPrimary">
+        </View>
+
+        <ImageView
+            android:id="@+id/img_hitory_product"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_below="@+id/divider"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/hinh1"></ImageView>
+
+        <TextView
+            android:id="@+id/tv_hitory_user_name_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/img_hitory_product"
+            android:text="Họ tên KH: "
+            android:textColor="@color/black"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_hitory_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_hitory_user_name_1"
+            android:text="username"
+            android:textColor="@color/black"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_hitory_product_totalprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hitory_product_text_num"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/img_hitory_product"
+            android:text="Tổng tiền: "
+            android:textColor="@color/black"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_hitory_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hitory_product_text_num"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/tv_hitory_product_totalprice"
+            android:text="20.000.000 VND"
+            android:textColor="@color/black"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_hitory_product_text_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hitory_user_name"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/img_hitory_product"
+            android:text="Số lượng: "
+            android:textColor="@color/black"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_hitory_product_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hitory_user_name"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_hitory_product_text_num"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="20dp"></TextView>
+
+
+        <TextView
+            android:id="@+id/tv_hitory_product_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hitory_product_price"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/img_hitory_product"
+            android:text="Ngày Đặt: "
+            android:textColor="@color/black"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_hitory_product_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hitory_product_price"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_hitory_product_text"
+            android:text="null"
+            android:textColor="@color/black"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_hitory_product_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hitory_product_date"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="right"
+            android:text="Đang Chờ Xác Nhận"
+            android:textColor="@color/teal_700"
+            android:textSize="20dp"></TextView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

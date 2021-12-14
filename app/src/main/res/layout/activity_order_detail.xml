@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F8FF"
+    tools:context=".OrderDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Theme.DoAnLTDD"
+        app:titleTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_order_info_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Thông Tin Đặt Hàng"
+                android:textColor="#3A88D1"
+                android:textSize="25dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Mã Đặt Hàng   :"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_no"
+                android:layout_width="280dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/tv_order_info_text1"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tv_order_info_text2"
+                android:text="AAAAA"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Ngày Đặt          :"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_date"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tv_order_info_text3"
+                android:text="27-01-2021"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Họ Tên KH       :"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_cust_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text3"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/tv_order_info_text4"
+                android:text="Trí"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Địa Chỉ              :"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_cust_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text4"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tv_order_info_text5"
+                android:text="12 Hải Triều"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text5"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="Số Điện Thoại :"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_cust_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text5"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/tv_order_info_text5"
+                android:text="0777838375"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_text7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Số Sản Phẩm  :"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text6"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tv_order_info_text5"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_text8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text7"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Tổng Tiền         :"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text7"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tv_order_info_text6"
+                android:text="30,000,000 VNĐ"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_text9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text8"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="Trạng Thái       :"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_order_info_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text8"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tv_order_info_text7"
+                android:text="Đang Chờ Xác Nhận"
+                android:textColor="@color/teal_700"
+                android:textSize="20dp"></TextView>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_order_info_text9"
+                android:background="#D1CECE">
+            </View>
+
+            <TextView
+                android:id="@+id/tv_order_info_text10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Thông Tin Sản Phẩm :"
+                android:textColor="#3A88D1"
+                android:textSize="20dp"></TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_order_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_info_text10"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"></androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/btn_order_info_back"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rc_order_info"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#237CEA"
+                android:padding="10dp"
+                android:text="Quay Lại"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                app:backgroundTint="@null"
+                app:cornerRadius="20dp"></Button>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

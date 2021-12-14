@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F8FF"
+    tools:context=".UpdateProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/Theme.DoAnLTDD"
+            app:titleTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Thông tin cá nhân"
+            android:textAllCaps="true"
+            android:textColor="#3A88D1"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_account_profile"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            android:layout_below="@+id/tv_profile"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/hinh1"/>
+
+        <EditText
+            android:id="@+id/edt_username_profile"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_account_profile"
+            app:layout_constraintTop_toBottomOf="@+id/image_account_profile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:hint="Tên tài khoản"
+            android:inputType="textPersonName"
+            android:textAllCaps="false"
+            android:background="@drawable/edit_text"
+            android:padding="18dp"
+            android:drawablePadding="4dp"
+            android:drawableTint="#4BD4E5"
+            android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/edt_name_profile"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/edt_username_profile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:hint="Họ và tên KH"
+            android:inputType="textPersonName"
+            android:textAllCaps="false"
+            android:background="@drawable/edit_text"
+            android:padding="18dp"
+            android:drawablePadding="4dp"
+            android:drawableTint="#4BD4E5"
+            android:drawableLeft="@drawable/ic_baseline_assignment_ind_24"
+            android:textColorHint="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_email_profile"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/edt_name_profile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:textAllCaps="false"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:background="@drawable/edit_text"
+            android:padding="18dp"
+            android:drawablePadding="4dp"
+            android:drawableTint="#4BD4E5"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/edt_phone_profile"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email_profile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:hint="Số điện thoại"
+            android:inputType="phone"
+            android:textAllCaps="false"
+            android:background="@drawable/edit_text"
+            android:padding="18dp"
+            android:drawablePadding="4dp"
+            android:drawableTint="#4BD4E5"
+            android:drawableLeft="@drawable/ic_baseline_phone_android_24"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/edt_address_profile"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/edt_phone_profile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:hint="Địa chỉ"
+            android:inputType="text"
+            android:textAllCaps="false"
+            android:background="@drawable/edit_text"
+            android:padding="18dp"
+            android:drawablePadding="4dp"
+            android:drawableTint="#4BD4E5"
+            android:drawableLeft="@drawable/ic_baseline_home_24"
+            android:textColorHint="@color/black" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#5D9DEC"
+            android:padding="10dp"
+            android:text="Cập nhật"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:cornerRadius="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_address_profile" />
+
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#237CEA"
+            android:padding="10dp"
+            android:text="Quay lại"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            app:cornerRadius="40dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_update" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

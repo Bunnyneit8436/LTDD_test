@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F0F8FF"
+    tools:context=".AccountFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#1DAAEA">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_account"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/hinh1"/>
+
+        <TextView
+            android:id="@+id/tv_name_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Admin"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/tv_email_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="24dp"
+            android:text="admin@gmail.com"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_account_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0F8FF"
+            android:text="Quản lý tài khoản"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:gravity="left|center"
+            android:padding="18dp"
+
+            android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+            android:drawableTint="#1DAAEA"/>
+
+        <Button
+            android:id="@+id/btn_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0F8FF"
+            android:text="Lịch sử mua hàng"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:gravity="left|center"
+            android:padding="16dp"
+            android:layout_marginTop="-16dp"
+            android:drawableLeft="@drawable/ic_baseline_shopping_cart_24"
+            android:drawableTint="#1DAAEA"/>
+
+        <Button
+            android:id="@+id/btn_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0F8FF"
+            android:text="Đã xem gần đây"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:gravity="left|center"
+            android:padding="16dp"
+            android:layout_marginTop="-16dp"
+            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+            android:drawableTint="#1DAAEA"/>
+
+        <Button
+            android:id="@+id/btn_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F0F8FF"
+            android:text="Trợ giúp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:gravity="left|center"
+            android:padding="16dp"
+            android:layout_marginTop="-16dp"
+            android:drawableLeft="@drawable/ic_baseline_info_24"
+            android:drawableTint="#1DAAEA"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#237CEA"
+        android:text="Đăng xuất"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:layout_marginTop="530dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        app:cornerRadius="20dp"
+        android:padding="10dp"/>
+
+</FrameLayout>

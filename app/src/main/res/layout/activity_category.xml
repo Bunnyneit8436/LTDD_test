@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.CategoryActivity">
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimary"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="@style/Theme.DoAnLTDD"
+      app:titleTextColor="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+      android:id="@+id/edt_category_name"
+      android:layout_width="380dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="8dp"
+      android:layout_marginTop="300dp"
+      android:layout_marginRight="8dp"
+      android:background="@drawable/edit_text"
+      android:drawableLeft="@drawable/ic_baseline_category_24"
+      android:drawablePadding="4dp"
+      android:drawableTint="#4BD4E5"
+      android:hint="ten danh muc"
+      android:inputType="text"
+      android:padding="18dp"
+      android:textAllCaps="false"
+      android:textColorHint="@color/black"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+  <Button
+      android:id="@+id/btn_them"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="8dp"
+      android:backgroundTint="#5D9DEC"
+      android:padding="10dp"
+      android:text="Them"
+      android:textAllCaps="true"
+      android:textColor="@color/white"
+      android:textSize="20dp"
+      app:cornerRadius="20dp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/edt_category_name" />
+
+  <Button
+      android:id="@+id/btn_product"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="8dp"
+      android:backgroundTint="#5D9DEC"
+      android:padding="10dp"
+      android:text="Them product"
+      android:textAllCaps="true"
+      android:textColor="@color/white"
+      android:textSize="20dp"
+      app:cornerRadius="20dp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/btn_them" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

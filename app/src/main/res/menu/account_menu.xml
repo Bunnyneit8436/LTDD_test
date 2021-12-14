@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnuSetting"
+        android:title="Search"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_baseline_settings_24"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/mnuCart"
+        android:title="Search"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/mnuFavorite"
+        android:title="Search"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/mnuLogout"
+        android:title="LOGOUT"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_baseline_logout_24"
+        app:showAsAction="always"
+        />
+
+</menu>

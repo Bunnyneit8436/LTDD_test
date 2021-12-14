@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F8FF"
+    tools:context=".SigninActivity">
+
+    <TextView
+        android:id="@+id/figtoys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/roboto_black"
+        android:text="FIGTOYS"
+        android:textAllCaps="true"
+        android:textColor="#3A88D1"
+        android:textSize="42dp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="-10dp"
+        android:src="@drawable/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/figtoys" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_logo"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/edit_text"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="4dp"
+        android:drawableTint="#4BD4E5"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="18dp"
+        android:textAllCaps="false"
+        android:textColorHint="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_logo" />
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_email"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
+        android:background="@drawable/edit_text"
+        android:padding="18dp"
+        android:drawablePadding="4dp"
+        android:drawableTint="#4BD4E5"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:textColorHint="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_forgotpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        android:text="Bạn quên mật khẩu?"/>
+
+
+    <Button
+        android:id="@+id/btn_Signin"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#5D9DEC"
+        android:padding="10dp"
+        android:text="Đăng nhập"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_forgotpass" />
+
+
+    <Button
+        android:id="@+id/btn_Signup"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="#237CEA"
+        android:padding="10dp"
+        android:text="Đăng ký"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_Signin" />
+
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:id="@+id/img_admin"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:src="@drawable/hinh1"-->
+<!--        app:civ_border_color="@color/white"-->
+<!--        app:civ_border_width="2dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"/>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

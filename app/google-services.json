@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "124702591109",
+    "firebase_url": "https://do-an-ltdd-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "do-an-ltdd",
+    "storage_bucket": "do-an-ltdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124702591109:android:cdf301deb8da3a2f0a81ec",
+        "android_client_info": {
+          "package_name": "com.example.doan_ltdd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124702591109-v94enj83fq6bojjmr6l1b5s7lpsffef9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.doan_ltdd",
+            "certificate_hash": "13ec287e5e2c649f5812bdf723c8baaf765cd028"
+          }
+        },
+        {
+          "client_id": "124702591109-7qg377pfvd6lm9su9dvudvsjv1515hvo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqOxdy25Zq5zgAbp3jMX01_bDf7-5ag50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124702591109-7qg377pfvd6lm9su9dvudvsjv1515hvo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
