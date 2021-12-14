@@ -258,12 +258,28 @@
                 android:layout_marginTop="15dp"></androidx.recyclerview.widget.RecyclerView>
 
             <Button
-                android:id="@+id/btn_order_info_back"
+                android:id="@+id/btn_order_info_cancel"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rc_order_info"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#237CEA"
+                android:padding="10dp"
+                android:text="Hủy Đơn Hàng"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                app:backgroundTint="@null"
+                app:cornerRadius="20dp"></Button>
+
+            <Button
+                android:id="@+id/btn_order_info_back"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rc_order_info"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="#237CEA"
                 android:padding="10dp"

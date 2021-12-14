@@ -13,12 +13,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.doan_ltdd.Adapter.OrderDetailAdapter;
 import com.example.doan_ltdd.Adapter.OrderHistoryAdapter;
 import com.example.doan_ltdd.Class.Order;
 import com.example.doan_ltdd.Class.Product;
 import com.example.doan_ltdd.Class.ProductCart;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +29,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.sql.Date;
 import java.util.ArrayList;
 
 public class OrderDetailActivity extends AppCompatActivity implements OrderDetailAdapter.Listener{
@@ -38,14 +41,15 @@ public class OrderDetailActivity extends AppCompatActivity implements OrderDetai
     FirebaseDatabase database;
 
     ArrayList<ProductCart> listCartProduct;
-    Order order;
+    Order order, orderAgain;
 
     RecyclerView rc_order_info;
 
     TextView tv_order_info_no,tv_order_info_date,tv_order_info_cust_name,tv_order_info_cust_address,tv_order_info_cust_phone,tv_order_info_num,tv_order_info_total,tv_order_info_status;
-    Button btn_order_info_back;
+    Button btn_order_info_back, btn_order_info_cancel;
 
     OrderDetailAdapter orderDetailAdapter;
+    OrderHistoryAdapter orderHistoryAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +66,7 @@ public class OrderDetailActivity extends AppCompatActivity implements OrderDetai
         tv_order_info_total = findViewById(R.id.tv_order_info_total);
         tv_order_info_status = findViewById(R.id.tv_order_info_status);
         btn_order_info_back = findViewById(R.id.btn_order_info_back);
+        btn_order_info_cancel = findViewById(R.id.btn_order_info_cancel);
 
         toolbar = findViewById(R.id.toolbar);
 
@@ -85,6 +90,7 @@ public class OrderDetailActivity extends AppCompatActivity implements OrderDetai
         listCartProduct = new ArrayList<>();
         order = new Order();
 
+
         Intent intent =getIntent();
         order = (Order) intent.getSerializableExtra("Order");
 
@@ -99,7 +105,11 @@ public class OrderDetailActivity extends AppCompatActivity implements OrderDetai
 
         listCartProduct = order.listDetailOrder;
 
+        Date date = new Date(System.currentTimeMillis());
+        String status = "Đang chờ xác nhận";
+        String orderNo = userId+"_"+date.toString()+"_"+date.getTime();
 
+        orderAgain = new Order(orderNo,order.custEmail,order.custAddress,order.custName,order.custPhone,date.toString(),status,order.numProduct,order.totalPrice,order.listDetailOrder);
 
         rc_order_info.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         orderDetailAdapter = new OrderDetailAdapter(listCartProduct,this);
@@ -113,6 +123,44 @@ public class OrderDetailActivity extends AppCompatActivity implements OrderDetai
                 onBackPressed();
             }
         });
+
+        if(order.status.equals("Đã hủy") || order.status.equals("Giao hàng thành công"))
+        {
+//            btn_order_info_cancel.setVisibility(View.GONE);
+            btn_order_info_cancel.setText("Đặt lại đơn hàng");
+            btn_order_info_cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    myRef.child("DbOrder").child(userId).child(orderNo).setValue(orderAgain).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            orderDetailAdapter.notifyDataSetChanged();
+                            Intent intent = new Intent(OrderDetailActivity.this,MainActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(OrderDetailActivity.this,"Đặt hàng thành công",Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            });
+        }
+        else
+        {
+            btn_order_info_cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    myRef.child("DbOrder").child(userId).child(order.OrderNo).child("status").setValue("Đã hủy").addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Intent intent = new Intent(OrderDetailActivity.this,MainActivity.class);
+                            orderDetailAdapter.notifyDataSetChanged();
+                            startActivity(intent);
+                            Toast.makeText(OrderDetailActivity.this,"Hủy đơn hàng thành công",Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            });
+        }
+
     }
 
     @Override
