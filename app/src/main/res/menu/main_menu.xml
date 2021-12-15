@@ -7,9 +7,9 @@
     <item android:title="Dashboard"
         android:id="@+id/mnuDashboard"
         android:icon="@drawable/ic_dashboard_black_24dp"/>
-    <item android:title="Notification"
-        android:id="@+id/mnuNotification"
-        android:icon="@drawable/ic_baseline_notifications_24"/>
+<!--    <item android:title="Notification"-->
+<!--        android:id="@+id/mnuNotification"-->
+<!--        android:icon="@drawable/ic_baseline_notifications_24"/>-->
     <item android:title="Account"
         android:id="@+id/mnuAccount"
         android:icon="@drawable/ic_baseline_account_circle_24"/>

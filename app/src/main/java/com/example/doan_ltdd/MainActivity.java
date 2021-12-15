@@ -53,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 toolbar.setTitle("Danh mục");
                 fragment = new DashBoardFragment();
                 break;
-            case R.id.mnuNotification:
-                toolbar.setTitle("Thông báo");
-                fragment = new NotificationFragment();
-                break;
+//            case R.id.mnuNotification:
+//                toolbar.setTitle("Thông báo");
+//                fragment = new NotificationFragment();
+//                break;
             case R.id.mnuAccount:
                 toolbar.setTitle("Tài khoản");
                 fragment = new AccountFragment();
