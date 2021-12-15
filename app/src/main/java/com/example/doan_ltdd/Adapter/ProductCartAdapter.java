@@ -17,11 +17,13 @@ import com.example.doan_ltdd.Class.Product;
 import com.example.doan_ltdd.Class.ProductCart;
 import com.example.doan_ltdd.R;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductCartAdapter extends RecyclerView.Adapter<ProductCartAdapter.ProductCartVH> {
 
+    DecimalFormat format = new DecimalFormat("###,###,###");
     public ArrayList<ProductCart> listCartProduct;
 
     public ProductCartAdapter(ArrayList<ProductCart> listCartProduct)
@@ -45,7 +47,7 @@ public class ProductCartAdapter extends RecyclerView.Adapter<ProductCartAdapter.
         } else {
             Glide.with(holder.img_photo_cart.getContext()).load(Uri.parse(product.productImage)).into(holder.img_photo_cart);
             holder.tv_name_product_cart.setText(product.productName);
-            holder.tv_price_product_cart.setText(product.productPrice + " VNĐ");
+            holder.tv_price_product_cart.setText(format.format(product.productPrice) + " VNĐ");
             holder.tv_count_cart.setText(String.valueOf(product.numProduct));
             holder.img_remove_cart.setOnClickListener(new View.OnClickListener() {
                 @Override

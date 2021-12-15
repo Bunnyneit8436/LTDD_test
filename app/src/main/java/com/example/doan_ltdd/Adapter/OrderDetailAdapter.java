@@ -16,12 +16,14 @@ import com.example.doan_ltdd.Class.Product;
 import com.example.doan_ltdd.Class.ProductCart;
 import com.example.doan_ltdd.R;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class OrderDetailAdapter extends RecyclerView.Adapter<OrderDetailAdapter.OrderDetailVH> {
 
     ArrayList<ProductCart> listProduct;
     Listener listener;
+    DecimalFormat format = new DecimalFormat("###,###,###");
 
     public OrderDetailAdapter(ArrayList<ProductCart> listProduct, Listener listener){
         this.listProduct=listProduct;
@@ -48,7 +50,7 @@ public class OrderDetailAdapter extends RecyclerView.Adapter<OrderDetailAdapter.
         {
             Glide.with(holder.img_photo_order.getContext()).load(Uri.parse(productCart.productImage)).into(holder.img_photo_order);
             holder.tv_name_product_order.setText(productCart.productName);
-            holder.tv_price_product_order.setText(productCart.productPrice + " VNĐ");
+            holder.tv_price_product_order.setText(format.format(productCart.productPrice) + " VNĐ");
             holder.tv_count_order.setText(String.valueOf(productCart.numProduct));
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

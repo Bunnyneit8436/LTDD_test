@@ -45,7 +45,7 @@
                 android:layout_below="@+id/tv_order_info_text1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
-                android:text="Mã Đặt Hàng   :"
+                android:text="Mã Đặt Hàng      :"
                 android:textColor="@color/black"
                 android:textSize="20dp"></TextView>
 
@@ -69,7 +69,7 @@
                 android:layout_below="@+id/tv_order_info_text2"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
-                android:text="Ngày Đặt          :"
+                android:text="Ngày Đặt             :"
                 android:textColor="@color/black"
                 android:textSize="20dp"></TextView>
 
@@ -93,7 +93,7 @@
                 android:layout_below="@+id/tv_order_info_text3"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
-                android:text="Họ Tên KH       :"
+                android:text="Tên Khách Hàng:"
                 android:textColor="@color/black"
                 android:textSize="20dp"></TextView>
 
@@ -116,7 +116,7 @@
                 android:layout_below="@+id/tv_order_info_text4"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
-                android:text="Địa Chỉ              :"
+                android:text="Địa Chỉ                  :"
                 android:textColor="@color/black"
                 android:textSize="20dp"></TextView>
 
@@ -125,7 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_order_info_text4"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="13dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/tv_order_info_text5"
@@ -138,9 +138,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_order_info_text5"
-                android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
-                android:text="Số Điện Thoại :"
+                android:layout_marginTop="5dp"
+                android:text="Số Điện Thoại     :"
                 android:textColor="@color/black"
                 android:textSize="20dp"></TextView>
 
@@ -164,7 +164,7 @@
                 android:layout_below="@+id/tv_order_info_text6"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
-                android:text="Số Sản Phẩm  :"
+                android:text="Số Sản Phẩm      :"
                 android:textColor="@color/black"
                 android:textSize="20dp"></TextView>
 
@@ -188,7 +188,7 @@
                 android:layout_below="@+id/tv_order_info_text7"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
-                android:text="Tổng Tiền         :"
+                android:text="Tổng Tiền             :"
                 android:textColor="@color/black"
                 android:textSize="20dp"></TextView>
 
@@ -210,9 +210,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_order_info_text8"
-                android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
-                android:text="Trạng Thái       :"
+                android:layout_marginTop="5dp"
+                android:text="Trạng Thái            :"
                 android:textColor="@color/black"
                 android:textSize="20dp"></TextView>
 

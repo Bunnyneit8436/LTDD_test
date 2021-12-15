@@ -1,5 +1,7 @@
 package com.example.doan_ltdd;
 
+import static java.lang.String.format;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -30,12 +32,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.sql.Date;
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class OrderDetailActivity extends AppCompatActivity implements OrderDetailAdapter.Listener{
 
     Toolbar toolbar;
 
+    DecimalFormat format = new DecimalFormat("###,###,###");
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
     FirebaseAuth mAuth;
     FirebaseUser mUser;
     FirebaseDatabase database;
@@ -100,7 +107,7 @@ public class OrderDetailActivity extends AppCompatActivity implements OrderDetai
         tv_order_info_cust_address.setText(order.custAddress);
         tv_order_info_cust_phone.setText(order.custPhone);
         tv_order_info_num.setText(String.valueOf(order.numProduct));
-        tv_order_info_total.setText(order.totalPrice+" VND");
+        tv_order_info_total.setText(format.format(order.totalPrice)+" VNĐ");
         tv_order_info_status.setText(order.status);
 
         listCartProduct = order.listDetailOrder;

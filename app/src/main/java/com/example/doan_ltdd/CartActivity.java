@@ -34,10 +34,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.sql.Date;
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class CartActivity extends AppCompatActivity {
 
+    DecimalFormat format = new DecimalFormat("###,###,###");
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+    SimpleDateFormat dateFormat2 = new SimpleDateFormat("dd-MM-yyyy_HH:mm:ss");
     public FirebaseAuth mAuth;
     FirebaseUser mUser;
     FirebaseDatabase database;
@@ -101,7 +107,7 @@ public class CartActivity extends AppCompatActivity {
                 }
 
                 productCartAdapter.notifyDataSetChanged();
-                tv_cart_total_price.setText( totalPrice +" VNĐ" );
+                tv_cart_total_price.setText( format.format(totalPrice) +" VNĐ" );
                 if(listCartProduct.size()==0)
                 {
                     setVisible(false);
@@ -157,12 +163,14 @@ public class CartActivity extends AppCompatActivity {
                 String cust_address = edt_cart_cust_address.getText().toString();
                 String cust_phone= edt_cart_cust_phone.getText().toString();
                 Date date = new Date(System.currentTimeMillis());
+                String datetime= dateFormat.format(date);
+                String datetime1 = dateFormat2.format(date);
                 String status = "Đang chờ xác nhận";
-                String orderNo = userId+"_"+date.toString()+"_"+date.getTime();
+                String orderNo = userId.substring(0,4)+"_"+datetime1;
 
                 if(!cust_name.isEmpty() && !cust_email.isEmpty() && !cust_address.isEmpty() && !cust_phone.isEmpty() && listCartProduct.size()>0)
                 {
-                    custOrder = new Order(orderNo,cust_email,cust_address,cust_name,cust_phone,date.toString(),status,totalNum,totalPrice,listCartProduct);
+                    custOrder = new Order(orderNo,cust_email,cust_address,cust_name,cust_phone,datetime,status,totalNum,totalPrice,listCartProduct);
                     myRef.child("DbOrder").child(userId).child(orderNo).setValue(custOrder).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {

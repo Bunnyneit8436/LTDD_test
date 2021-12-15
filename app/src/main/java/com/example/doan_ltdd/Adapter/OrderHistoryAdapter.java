@@ -16,12 +16,14 @@ import com.example.doan_ltdd.Class.Product;
 import com.example.doan_ltdd.Class.ProductCart;
 import com.example.doan_ltdd.R;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class OrderHistoryAdapter extends RecyclerView.Adapter<OrderHistoryAdapter.OrderHistoryVH> {
 
     public ArrayList<Order> listOrder;
     Listener listener;
+    DecimalFormat format = new DecimalFormat("###,###,###");
 
     public OrderHistoryAdapter(ArrayList<Order> listOrder, Listener listener){
         this.listOrder=listOrder;
@@ -48,7 +50,7 @@ public class OrderHistoryAdapter extends RecyclerView.Adapter<OrderHistoryAdapte
             holder.tv_hitory_product_orderNo.setText(order.OrderNo);
             holder.tv_hitory_user_name.setText(order.custName);
             holder.tv_hitory_product_num.setText(String.valueOf(order.numProduct));
-            holder.tv_hitory_product_price.setText(order.totalPrice+ " VND");
+            holder.tv_hitory_product_price.setText(format.format(order.totalPrice)+ " VNĐ");
             holder.tv_hitory_product_date.setText(order.dateOrder);
             holder.tv_hitory_product_status.setText(order.status);
 

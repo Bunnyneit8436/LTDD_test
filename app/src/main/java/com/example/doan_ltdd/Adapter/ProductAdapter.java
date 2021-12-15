@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 import com.example.doan_ltdd.Class.Product;
 import com.example.doan_ltdd.R;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +23,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     public ArrayList<Product> arrayList;
     Listener listener;
+    DecimalFormat format = new DecimalFormat("###,###,###");
 
     public ProductAdapter(ArrayList<Product> arrayList, Listener listener){
         this.arrayList=arrayList;
@@ -46,7 +48,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         else
         {
             holder.tv_product_name.setText(product.productName);
-            holder.tv_product_price.setText(product.productPrice+ " VNĐ");
+            holder.tv_product_price.setText(format.format(product.productPrice)+ " VNĐ");
             Glide.with(holder.img_product.getContext()).load(Uri.parse(product.productImage)).into(holder.img_product);
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

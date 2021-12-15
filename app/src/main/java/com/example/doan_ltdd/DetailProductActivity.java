@@ -29,6 +29,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class DetailProductActivity extends AppCompatActivity {
@@ -39,6 +40,8 @@ public class DetailProductActivity extends AppCompatActivity {
     Toolbar toolbar;
     ImageButton subquantity, addquantity;
     TextView tv_quantity;
+
+    DecimalFormat format = new DecimalFormat("###,###,###");
 
     public Product detailProduct;
     public ArrayList<Product> listCartProduct;
@@ -125,7 +128,7 @@ public class DetailProductActivity extends AppCompatActivity {
     private void setValueItem(){
         if (detailProduct != null){
             tvDetailProductName.setText(detailProduct.productName);
-            tvDetailProductPrice.setText(detailProduct.productPrice + " VNĐ");
+            tvDetailProductPrice.setText(format.format(detailProduct.productPrice) + " VNĐ");
             Glide.with(this).load(Uri.parse(detailProduct.productImage)).into(imgDetailProductPhoto);
             tvDetailProductDescription.setText(detailProduct.productDesc);
 

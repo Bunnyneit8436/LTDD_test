@@ -25,6 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 /**
@@ -37,6 +38,7 @@ public class CategoryFigureFragment extends Fragment implements ProductAdapter.L
     RecyclerView rc_product_cate_figure;
     ArrayList<Product> productList;
     ProductAdapter productAdapter;
+    DecimalFormat format = new DecimalFormat("###,###,###");
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
